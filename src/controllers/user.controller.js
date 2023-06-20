@@ -82,7 +82,7 @@ const login = catchError(async (req, res)=>{
      // Paso 3.- Verificar el password y comparar
      const isValuePassword = await bcrypt.compare(password, user.password) // password vuebe de la linea 54
      if(!isValuePassword) return res.status(401).json({message: "Invalid Credencials"})
-     if(!user.isVerified) return res.sendStatus(401)
+    //  if(!user.isVerified) return res.sendStatus(401)
 
  // Paso 4.- Generar token
  const token = jwt.sign(
