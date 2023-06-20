@@ -109,9 +109,9 @@ const resetPassword = catchError(async (req, res)=>{
 
     await sendEmail({
         to: email,
-        subject: "Verificación de cuenta",
+        subject: "Cambio de password",
         html: `
-        <h2>Haz click en el siguiente enlace para verificar la cuenta!:</h2>
+        <h2>Haz click en el siguiente enlace para modificar la password:</h2>
         <a href="${url}">Click me!</a>
         `
     })
